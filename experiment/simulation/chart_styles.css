@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container2 {
+    
+    
+    
+    background-color: #f9f9f9; /* Optional background */
+    border-radius: 8px; /* Optional rounded corners */
+    
+    width: 95vw; /* 50% of the viewport width */
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .gauge-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px; /* Space between gauge and charts */
+  }
+  
+  .gauge-box {
+    width: 48%; /* Width for each gauge */
+  }
+  
+  .gauge-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  .chart-box {
+    width: 48%;
+  }
+  
+  #gaugeDiv1, #gaugeDiv2 {
+    width: 100%;
+    height: 300px; /* Adjust height for gauges */
+  }
+  
+  #chartdiv1, #chartdiv2 {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .chart-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px; /* Space above title */
+  }
+  
