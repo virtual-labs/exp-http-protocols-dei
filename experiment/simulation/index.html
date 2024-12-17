@@ -1,13 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtual IoT Lab DEI</title>
+    <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="chart_styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- amCharts Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<body>
+    <header>
+        <div class="exp-changer">
+          <div class="exp-changer-heading">
+            <p class="p-head">IOT Virtual Lab</p>
+          </div>
+        </div>
+      </header>      
+      
+    <div class="container">
+        <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
+        <textarea readonly cols="30" rows="10" type="text" id="textBox" placeholder="insert the code"></textarea>
+        <h2 id="pushbuttonPower" onclick="changePower();">Start Simulation</h2>
+        <a href="#scroll">Check IoT Server</a>
+    </div>
+
+    <a>
+        <p class="p-head2">After start the simulation, the data will be send to IoT server using HTTP protocol.</p>
+    </a>
+
+    <!-- Main container -->
+    <div class="container2" id="scroll">
+
+        <!-- Header -->
+        <h1>IoT Server</h1>
+
+        <!-- Gauge Charts -->
+        <div class="gauge-container">
+            <div class="gauge-box">
+                <div class="gauge-title">Temperature</div>
+                <div id="gaugeDiv1"></div>
+            </div>
+            <div class="gauge-box">
+                <div class="gauge-title">Humidity</div>
+                <div id="gaugeDiv2"></div>
+            </div>
+        </div>
+
+        <!-- Chart Containers -->
+        <div class="chart-container">
+            <div class="chart-box">
+                <div id="chartdiv1"></div>
+                <div class="chart-title">Temperature</div> <!-- Title below the chart -->
+            </div>
+            <div class="chart-box">
+                <div id="chartdiv2"></div>
+                <div class="chart-title">Humidity</div> <!-- Title below the chart -->
+            </div>
+        </div>
+
+    </div> <!-- End of container2 -->
+
+    <!-- External JavaScript file -->
+    <script>
+        // for insert code
+        function insertled() {
+          var serv = (document.getElementById(
+            "textBox"
+          ).value = `#include <WiFi.h>
+#include <HTTPClient.h>
+#include <DHT.h>
+
+// Replace with your network credentials
+const char* ssid = "iotvlab";
+const char* password = "iotvlab123";
+
+// Your server URL
+const char* serverName = "http://iot-server-ESQFVRHY.com";
+
+// Define DHT sensor type and GPIO pin
+#define DHTPIN 4     // DHT sensor is connected to GPIO 4
+#define DHTTYPE DHT11   // DHT 11 sensor (you can use DHT22 as well)
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+
+  // Initialize DHT sensor
+  dht.begin();
+
+  // Connect to Wi-Fi
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi...");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.print(".");
+  }
+  Serial.println(" Connected!");
+}
+
+void loop() {
+  // Only send data when Wi-Fi is connected
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+
+    // Read DHT sensor values
+    float temperature = dht.readTemperature();
+    float humidity = dht.readHumidity();
+
+    // Check if the reading is valid
+    if (isnan(temperature) || isnan(humidity)) {
+      Serial.println("Failed to read from DHT sensor!");
+      return;
+    }
+
+    // Create JSON or URL encoded data payload
+    String httpRequestData = "temperature=" + String(temperature) + "&humidity=" + String(humidity);
+
+    // Specify the server's URL
+    http.begin(serverName);
+    http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Send the data via HTTP POST
+    int httpResponseCode = http.POST(httpRequestData);
+
+    // If the response code is greater than 0, it means data was sent successfully
+    if (httpResponseCode > 0) {
+      String response = http.getString(); // Get response from server
+      Serial.println("Data sent successfully.");
+      Serial.println("Server response: " + response);
+    } else {
+      Serial.println("Error in sending data. HTTP Response code: " + String(httpResponseCode));
+    }
+
+    // Free resources
+    http.end();
+  } else {
+    Serial.println("WiFi not connected.");
+  }
+
+  // Send data every 10 seconds
+  delay(10000);
+}
+  `);
+        }
+        insertled();
+      </script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
