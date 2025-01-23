@@ -2,37 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which protocol is used to send sensor data to IoT platforms in this experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "MQTT",
+        "b": "HTTP",
+        "c": "TCP",
+        "d": "FTP"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "MQTT is a lightweight messaging protocol, but HTTP is used for data transfer in this case.",
+        "b": "HTTP is the protocol used to send sensor data to IoT platforms in this experiment.",
+        "c": "TCP is a transport layer protocol, not typically used for IoT data transfer directly.",
+        "d": "FTP is used for file transfers, not for sending live data in IoT applications."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the role of the ESP8266/ESP32 in this experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To process the sensor data",
+        "b": "To connect to the IoT platform and send the data",
+        "c": "To power the sensors",
+        "d": "To store the data locally"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The ESP8266/ESP32 does not process data; it sends it to the IoT platform.",
+        "b": "The ESP8266/ESP32 connects to the internet and sends sensor data to the cloud platform using HTTP.",
+        "c": "The ESP8266/ESP32 powers the sensors through its GPIO pins, but it doesn't store data locally.",
+        "d": "The ESP8266/ESP32 does not store data locally; it sends it to the cloud for remote access."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
