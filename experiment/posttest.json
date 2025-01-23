@@ -2,37 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following platforms can be used to display the sensor data sent via HTTP protocol?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "ThingSpeak",
+        "b": "Google Drive",
+        "c": "Microsoft Word",
+        "d": "Notepad"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "ThingSpeak is a widely used IoT platform that can display sensor data.",
+        "b": "Google Drive is a cloud storage service, not an IoT platform.",
+        "c": "Microsoft Word is a word processor, not related to IoT data display.",
+        "d": "Notepad is a text editor, not an IoT platform."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the HTTP method used to send data to an IoT platform in this experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "POST",
+        "b": "GET",
+        "c": "PUT",
+        "d": "DELETE"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The POST method is used to send data to a server or IoT platform.",
+        "b": "GET is used to request data from a server, not to send data.",
+        "c": "PUT is used to update existing data on a server.",
+        "d": "DELETE is used to remove data from the server."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]

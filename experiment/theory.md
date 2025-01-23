@@ -1,1 +1,3 @@
-### Link your theory in here
+This experiment demonstrates how to interface multiple sensors (like temperature, humidity, motion, and air quality sensors) with an ESP8266/ESP32 microcontroller and send the live data to an IoT platform using HTTP protocols. 
+
+The ESP8266/ESP32 connects to the internet and communicates with cloud services using HTTP requests to upload sensor data, enabling remote monitoring and control. This process is fundamental for creating smart IoT applications that monitor environmental conditions in real-time.
