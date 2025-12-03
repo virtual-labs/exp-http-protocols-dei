@@ -1,1 +1,3 @@
-1. Simulation of sending live sensors data on IoT Platform using HTTP Protocols and ESP8266/ESP32
+## Aim
+
+To simulate sending live sensor readings to cloud platforms using ESP8266/ESP32 via HTTP protocol. The objective is to understand REST API communication, web requests, and data logging for remote monitoring.

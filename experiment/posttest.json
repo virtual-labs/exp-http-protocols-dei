@@ -2,37 +2,113 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Which of the following platforms can be used to display the sensor data sent via HTTP protocol?",
+      "question": "What does HTTP stand for?",
       "answers": {
-        "a": "ThingSpeak",
-        "b": "Google Drive",
-        "c": "Microsoft Word",
-        "d": "Notepad"
-      },
-      "explanations": {
-        "a": "ThingSpeak is a widely used IoT platform that can display sensor data.",
-        "b": "Google Drive is a cloud storage service, not an IoT platform.",
-        "c": "Microsoft Word is a word processor, not related to IoT data display.",
-        "d": "Notepad is a text editor, not an IoT platform."
+        "a": "HyperText Transfer Protocol",
+        "b": "High Transmission Process",
+        "c": "Host Terminal Protocol",
+        "d": "Hyperlink Text Program"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the HTTP method used to send data to an IoT platform in this experiment?",
+      "question": "ESP8266/ESP32 is mainly used for ___ in IoT.",
       "answers": {
-        "a": "POST",
-        "b": "GET",
-        "c": "PUT",
-        "d": "DELETE"
+        "a": "Motor control",
+        "b": "Wi-Fi communication",
+        "c": "Sound generation",
+        "d": "Power supply"
       },
-      "explanations": {
-        "a": "The POST method is used to send data to a server or IoT platform.",
-        "b": "GET is used to request data from a server, not to send data.",
-        "c": "PUT is used to update existing data on a server.",
-        "d": "DELETE is used to remove data from the server."
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "HTTP uses which communication model?",
+      "answers": {
+        "a": "Publish–Subscribe",
+        "b": "Request–Response",
+        "c": "Client–Client",
+        "d": "Master–Slave"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which request is typically used to upload sensor data?",
+      "answers": {
+        "a": "HTTP DELETE",
+        "b": "HTTP GET",
+        "c": "HTTP POST",
+        "d": "HTTP HEAD"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "ThingSpeak generally receives data using which protocol?",
+      "answers": {
+        "a": "FTP",
+        "b": "HTTP",
+        "c": "SSH",
+        "d": "SMTP"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Is HTTP secure by default?",
+      "answers": {
+        "a": "Yes",
+        "b": "No",
+        "c": "Only when password is used",
+        "d": "Only on mobile data"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "ESP8266 works on which Wi-Fi standard?",
+      "answers": {
+        "a": "802.11ac",
+        "b": "802.11ax",
+        "c": "802.11b/g/n",
+        "d": "802.3"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which function is commonly used to send HTTP GET/POST in ESP boards?",
+      "answers": {
+        "a": "WiFi.send()",
+        "b": "HTTPClient.GET()/POST()",
+        "c": "ESP.sendHTTP()",
+        "d": "Cloud.write()"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Sensor data sent to cloud is usually in which format?",
+      "answers": {
+        "a": "Binary waves",
+        "b": "HTTP requests",
+        "c": "QR codes",
+        "d": "Audio packets"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If Wi-Fi is unavailable, ESP8266 will ___",
+      "answers": {
+        "a": "Automatically store data offline",
+        "b": "Keep trying to reconnect",
+        "c": "Delete all sensor values",
+        "d": "Switch to MQTT automatically"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
