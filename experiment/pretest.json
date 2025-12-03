@@ -2,37 +2,173 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Which protocol is used to send sensor data to IoT platforms in this experiment?",
+      "question": "What does HTTP stand for?",
       "answers": {
-        "a": "MQTT",
-        "b": "HTTP",
-        "c": "TCP",
-        "d": "FTP"
+        "a": "HyperText Transfer Protocol",
+        "b": "High Transmission Terminal Protocol",
+        "c": "Home Transfer Tracking Process",
+        "d": "Host Transfer Type Protocol"
       },
       "explanations": {
-        "a": "MQTT is a lightweight messaging protocol, but HTTP is used for data transfer in this case.",
-        "b": "HTTP is the protocol used to send sensor data to IoT platforms in this experiment.",
-        "c": "TCP is a transport layer protocol, not typically used for IoT data transfer directly.",
-        "d": "FTP is used for file transfers, not for sending live data in IoT applications."
+        "a": "Correct: HTTP stands for HyperText Transfer Protocol.",
+        "b": "Incorrect: This is not a real networking term.",
+        "c": "Incorrect: Not related to web communication.",
+        "d": "Incorrect: Does not represent HTTP."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "ESP8266/ESP32 is used mainly for which purpose in IoT?",
+      "answers": {
+        "a": "Motor control",
+        "b": "Wi-Fi connectivity",
+        "c": "Power regulation",
+        "d": "Display driving"
+      },
+      "explanations": {
+        "a": "Incorrect: Motor drivers handle this.",
+        "b": "Correct: ESP modules provide Wi-Fi in IoT.",
+        "c": "Incorrect: They do not regulate voltage.",
+        "d": "Incorrect: Displays need dedicated drivers."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the role of the ESP8266/ESP32 in this experiment?",
+      "question": "Which type of Wi-Fi communication does HTTP use?",
       "answers": {
-        "a": "To process the sensor data",
-        "b": "To connect to the IoT platform and send the data",
-        "c": "To power the sensors",
-        "d": "To store the data locally"
+        "a": "Packet switching",
+        "b": "Circuit switching",
+        "c": "Message switching",
+        "d": "Hybrid switching"
       },
       "explanations": {
-        "a": "The ESP8266/ESP32 does not process data; it sends it to the IoT platform.",
-        "b": "The ESP8266/ESP32 connects to the internet and sends sensor data to the cloud platform using HTTP.",
-        "c": "The ESP8266/ESP32 powers the sensors through its GPIO pins, but it doesn't store data locally.",
-        "d": "The ESP8266/ESP32 does not store data locally; it sends it to the cloud for remote access."
+        "a": "Correct: HTTP uses packet-switched communication.",
+        "b": "Incorrect: Used in old telephony.",
+        "c": "Incorrect: Not used for real-time web communication.",
+        "d": "Incorrect: No hybrid system in HTTP."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The device sending HTTP data acts as a ___?",
+      "answers": {
+        "a": "Server",
+        "b": "Client",
+        "c": "Router",
+        "d": "Repeater"
+      },
+      "explanations": {
+        "a": "Incorrect: Server receives requests.",
+        "b": "Correct: The sender is the client.",
+        "c": "Incorrect: Router forwards packets only.",
+        "d": "Incorrect: Repeater only boosts signals."
       },
       "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "ThingSpeak accepts data using what protocol?",
+      "answers": {
+        "a": "HTTP",
+        "b": "FTP",
+        "c": "SMTP",
+        "d": "POP3"
+      },
+      "explanations": {
+        "a": "Correct: ThingSpeak receives data via HTTP API.",
+        "b": "Incorrect: FTP is for file transfers.",
+        "c": "Incorrect: SMTP is for email.",
+        "d": "Incorrect: POP3 downloads emails."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "HTTP follows which model: request–___?",
+      "answers": {
+        "a": "Response",
+        "b": "Reply",
+        "c": "Return",
+        "d": "Restore"
+      },
+      "explanations": {
+        "a": "Correct: HTTP is request–response.",
+        "b": "Incorrect: Official term is response.",
+        "c": "Incorrect: Not used in HTTP.",
+        "d": "Incorrect: Irrelevant option."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which function in ESP8266 library is used to send HTTP requests?",
+      "answers": {
+        "a": "http.send()",
+        "b": "HTTPClient.GET()/POST()",
+        "c": "wifi.upload()",
+        "d": "send.httpData()"
+      },
+      "explanations": {
+        "a": "Incorrect: Not part of ESP library.",
+        "b": "Correct: HTTPClient.GET() and POST() send HTTP requests.",
+        "c": "Incorrect: No such function exists.",
+        "d": "Incorrect: Incorrect syntax."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Is HTTP a secure protocol by default?",
+      "answers": {
+        "a": "Yes",
+        "b": "No",
+        "c": "Only during POST requests",
+        "d": "Only if password is used"
+      },
+      "explanations": {
+        "a": "Incorrect: HTTP does not encrypt data.",
+        "b": "Correct: HTTP is not secure; HTTPS is secure.",
+        "c": "Incorrect: Request type does not add security.",
+        "d": "Incorrect: Passwords alone don't secure HTTP."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Sensor values are sent to cloud using ___ requests.",
+      "answers": {
+        "a": "HTTP GET/POST",
+        "b": "SMS",
+        "c": "VoIP",
+        "d": "Bluetooth packets"
+      },
+      "explanations": {
+        "a": "Correct: Cloud APIs receive data using GET or POST.",
+        "b": "Incorrect: SMS is slow and not used for IoT APIs.",
+        "c": "Incorrect: VoIP is for voice.",
+        "d": "Incorrect: Bluetooth is short-range, not cloud."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "ESP8266 works on which Wi-Fi standard? (802.__)",
+      "answers": {
+        "a": "802.11b/g/n",
+        "b": "802.11ac",
+        "c": "802.11ax",
+        "d": "802.3"
+      },
+      "explanations": {
+        "a": "Correct: ESP8266 supports 802.11 b/g/n.",
+        "b": "Incorrect: ac is for newer routers.",
+        "c": "Incorrect: ax is Wi-Fi 6.",
+        "d": "Incorrect: 802.3 is Ethernet."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
