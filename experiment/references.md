@@ -1,4 +1,4 @@
-## References
+### References
 
 1. ESP32 Official Documentation, "HTTP Client and Server Examples", Available at: https://docs.espressif.com
 2. Arduino Official Documentation, "Web Server and HTTP Requests", Available at: https://www.arduino.cc/en/Tutorial

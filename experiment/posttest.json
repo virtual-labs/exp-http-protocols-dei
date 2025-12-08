@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What does HTTP stand for?",
+      "question": "1. What does HTTP stand for?",
       "answers": {
         "a": "HyperText Transfer Protocol",
         "b": "High Transmission Process",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "ESP8266/ESP32 is mainly used for ___ in IoT.",
+      "question": "2. ESP8266/ESP32 is mainly used for ___ in IoT.",
       "answers": {
         "a": "Motor control",
         "b": "Wi-Fi communication",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "HTTP uses which communication model?",
+      "question": "3. HTTP uses which communication model?",
       "answers": {
         "a": "Publish–Subscribe",
         "b": "Request–Response",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which request is typically used to upload sensor data?",
+      "question": "4. Which request is typically used to upload sensor data?",
       "answers": {
         "a": "HTTP DELETE",
         "b": "HTTP GET",
@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "ThingSpeak generally receives data using which protocol?",
+      "question": "5. ThingSpeak generally receives data using which protocol?",
       "answers": {
         "a": "FTP",
         "b": "HTTP",
@@ -57,7 +57,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Is HTTP secure by default?",
+      "question": "6. Is HTTP secure by default?",
       "answers": {
         "a": "Yes",
         "b": "No",
@@ -68,7 +68,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "ESP8266 works on which Wi-Fi standard?",
+      "question": "7. ESP8266 works on which Wi-Fi standard?",
       "answers": {
         "a": "802.11ac",
         "b": "802.11ax",
@@ -79,7 +79,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which function is commonly used to send HTTP GET/POST in ESP boards?",
+      "question": "8. Which function is commonly used to send HTTP GET/POST in ESP boards?",
       "answers": {
         "a": "WiFi.send()",
         "b": "HTTPClient.GET()/POST()",
@@ -90,7 +90,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Sensor data sent to cloud is usually in which format?",
+      "question": "9. Sensor data sent to cloud is usually in which format?",
       "answers": {
         "a": "Binary waves",
         "b": "HTTP requests",
@@ -101,7 +101,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If Wi-Fi is unavailable, ESP8266 will ___",
+      "question": "10. If Wi-Fi is unavailable, ESP8266 will ___",
       "answers": {
         "a": "Automatically store data offline",
         "b": "Keep trying to reconnect",
