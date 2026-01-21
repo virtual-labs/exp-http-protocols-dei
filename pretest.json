@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does HTTP stand for?",
+      "answers": {
+        "a": "HyperText Transfer Protocol",
+        "b": "High Transmission Terminal Protocol",
+        "c": "Home Transfer Tracking Process",
+        "d": "Host Transfer Type Protocol"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. ESP8266/ESP32 is used mainly for which purpose in IoT?",
+      "answers": {
+        "a": "Motor control",
+        "b": "Wi-Fi connectivity",
+        "c": "Power regulation",
+        "d": "Display driving"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which type of Wi-Fi communication does HTTP use?",
+      "answers": {
+        "a": "Packet switching",
+        "b": "Circuit switching",
+        "c": "Message switching",
+        "d": "Hybrid switching"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The device sending HTTP data acts as a ___?",
+      "answers": {
+        "a": "Server",
+        "b": "Client",
+        "c": "Router",
+        "d": "Repeater"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. ThingSpeak accepts data using what protocol?",
+      "answers": {
+        "a": "HTTP",
+        "b": "FTP",
+        "c": "SMTP",
+        "d": "POP3"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. HTTP follows which model: request–___?",
+      "answers": {
+        "a": "Response",
+        "b": "Reply",
+        "c": "Return",
+        "d": "Restore"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Which function in ESP8266 library is used to send HTTP requests?",
+      "answers": {
+        "a": "http.send()",
+        "b": "HTTPClient.GET()/POST()",
+        "c": "wifi.upload()",
+        "d": "send.httpData()"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Is HTTP a secure protocol by default?",
+      "answers": {
+        "a": "Yes",
+        "b": "No",
+        "c": "Only during POST requests",
+        "d": "Only if password is used"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Sensor values are sent to cloud using ___ requests.",
+      "answers": {
+        "a": "HTTP GET/POST",
+        "b": "SMS",
+        "c": "VoIP",
+        "d": "Bluetooth packets"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. ESP8266 works on which Wi-Fi standard? (802.__)",
+      "answers": {
+        "a": "802.11b/g/n",
+        "b": "802.11ac",
+        "c": "802.11ax",
+        "d": "802.3"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

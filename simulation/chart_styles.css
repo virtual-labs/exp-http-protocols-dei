@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container2 {
+    
+    
+    
+    background-color: #f9f9f9; /* Optional background */
+    border-radius: 8px; /* Optional rounded corners */
+    
+    width: 95vw; /* 50% of the viewport width */
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .gauge-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px; /* Space between gauge and charts */
+  }
+  
+  .gauge-box {
+    width: 48%; /* Width for each gauge */
+  }
+  
+  .gauge-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  .chart-box {
+    width: 48%;
+  }
+  
+  #gaugeDiv1, #gaugeDiv2 {
+    width: 100%;
+    height: 300px; /* Adjust height for gauges */
+  }
+  
+  #chartdiv1, #chartdiv2 {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .chart-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px; /* Space above title */
+  }
+
+/* ============================================
+   RESPONSIVE DESIGN FOR CHARTS
+   ============================================ */
+
+/* Tablets and smaller (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container2 {
+    width: 98vw;
+    padding: 15px;
+  }
+
+  .gauge-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .gauge-box {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .chart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-box {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 280px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 400px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .container2 {
+    width: 100vw;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .gauge-container {
+    margin-bottom: 20px;
+  }
+
+  .gauge-box {
+    width: 95%;
+  }
+
+  .chart-box {
+    width: 98%;
+    margin-bottom: 25px;
+  }
+
+  .gauge-title, .chart-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 250px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 350px;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container2 {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .gauge-box {
+    width: 100%;
+  }
+
+  .chart-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gauge-title, .chart-title {
+    font-size: 14px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 220px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 300px;
+  }
+}
+  

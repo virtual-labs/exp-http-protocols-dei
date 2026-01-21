@@ -1,0 +1,617 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'DLBG',
+        'phase': 'Testing',
+        'expName': 'SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND
+    ESP8266/ESP32',
+        'expShortName': 'http-protocols'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="http-protocols">
+    	<meta name="developer-institute" content="DLBG">
+    	<meta name="learning-unit" content="SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND
+    ESP8266/ESP32">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="http-protocols" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND
+      ESP8266/ESP32" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;DLBG&quot;,&quot;expname&quot;:&quot;SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND\nESP8266/ESP32&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="simulation-of-sending-live-sensors-data-on-iot-platform-using-http-protocols-and-esp8266esp32">Simulation of sending live sensors data on IoT Platform using HTTP Protocols and ESP8266/ESP32</h2>
+          
+            </div>
+              <h4 id="objective">Objective</h4>
+          <p>The objective of this experiment is to simulate and analyze the process of acquiring real-time sensor data and transmitting it to a cloud-based IoT platform using <strong>HTTP communication protocols</strong> with <strong>ESP8266 and ESP32</strong> microcontrollers.</p>
+          <p>This experiment aims to help learners understand <strong>IoT communication flow</strong>, <strong>web-based data transmission</strong>, <strong>client–server interaction</strong>, and <strong>remote monitoring concepts</strong> in a virtual laboratory environment.</p>
+          <h4 id="introduction">Introduction</h4>
+          <p>The Internet of Things (IoT) refers to a network of physical devices embedded with sensors, software, and communication technologies that enable them to collect, process, and exchange data over the internet without human intervention.</p>
+          <p>IoT systems are widely deployed in modern applications such as <strong>smart homes</strong>, <strong>smart agriculture</strong>, <strong>healthcare monitoring</strong>, <strong>industrial automation</strong>, and <strong>environmental sensing</strong>. A typical IoT system integrates hardware, networking, and cloud services to provide real-time data access and intelligent decision making.</p>
+          <p>A general IoT system consists of the following components:</p>
+          <ul>
+          <li><strong>Sensors</strong> for collecting physical or environmental data  </li>
+          <li><strong>Microcontroller</strong> for processing sensor data  </li>
+          <li><strong>Communication module</strong> for transmitting data over the internet  </li>
+          <li><strong>Cloud platform</strong> for data storage, visualization, and analysis  </li>
+          </ul>
+          <p>In this experiment, <strong>ESP8266 and ESP32</strong> microcontrollers are used as IoT-enabled devices to transmit live sensor data to an IoT cloud platform using the <strong>HTTP protocol</strong>, which is one of the most widely used web communication standards.</p>
+          <h4 id="overview-of-esp8266-and-esp32">Overview of ESP8266 and ESP32</h4>
+          <h5 id="esp8266">ESP8266</h5>
+          <p>ESP8266 is a low-cost Wi-Fi-enabled microcontroller designed specifically for IoT applications. It integrates networking capabilities directly on the chip, allowing it to connect to Wi-Fi networks without external modules.</p>
+          <p>Key features of ESP8266 include:</p>
+          <ul>
+          <li>Integrated TCP/IP protocol stack  </li>
+          <li>Built-in Wi-Fi module  </li>
+          <li>GPIO pins for sensor interfacing  </li>
+          <li>Low power consumption  </li>
+          <li>Compact and cost-effective design  </li>
+          </ul>
+          <div><img src="./images/esp8266.webp" width="40%"></div>  
+          *Source: Espressif Systems Documentation*
+          
+          <h5 id="esp32">ESP32</h5>
+          <p>ESP32 is a more advanced and powerful successor to ESP8266. It supports both Wi-Fi and Bluetooth connectivity and is suitable for complex IoT applications.</p>
+          <p>Key features of ESP32 include:</p>
+          <ul>
+          <li>Dual-core processor  </li>
+          <li>Built-in Wi-Fi and Bluetooth  </li>
+          <li>Higher processing speed  </li>
+          <li>More GPIO pins and peripherals  </li>
+          <li>Enhanced security features  </li>
+          </ul>
+          <p>Both ESP8266 and ESP32 can operate as <strong>standalone IoT devices</strong>, directly connecting to the internet and communicating with cloud platforms.</p>
+          <div><img src="./images/esp32.webp" width="40%"></div>  
+          *Source: Espressif Systems Documentation*
+          
+          <h4 id="role-of-esp8266--esp32-in-iot-communication">Role of ESP8266 / ESP32 in IoT Communication</h4>
+          <p>In an IoT system, ESP8266 and ESP32 perform multiple critical functions:</p>
+          <ol>
+          <li><p><strong>Sensor Data Acquisition</strong><br>The microcontroller reads data from connected sensors using analog or digital pins.</p>
+          </li>
+          <li><p><strong>Data Processing and Formatting</strong><br>Raw sensor values are processed and converted into meaningful units such as temperature (°C), humidity (%), or gas concentration (PPM).</p>
+          </li>
+          <li><p><strong>Wi-Fi Connectivity</strong><br>The ESP connects to a local Wi-Fi network using stored credentials.</p>
+          </li>
+          <li><p><strong>HTTP Communication</strong><br>Sensor data is transmitted to a cloud server using HTTP requests.</p>
+          </li>
+          <li><p><strong>Server Response Handling</strong><br>The ESP receives acknowledgment or status responses from the server.</p>
+          </li>
+          </ol>
+          <p>Thus, ESP8266 / ESP32 act as a <strong>bridge between the physical world and the digital cloud infrastructure</strong>.</p>
+          <h4 id="iot-system-architecture">IoT System Architecture</h4>
+          <p>The general IoT architecture used in this experiment follows a layered approach:</p>
+          <ul>
+          <li><p><strong>Sensing Layer</strong><br>Sensors measure real-world parameters such as temperature, humidity, gas concentration, or distance.</p>
+          </li>
+          <li><p><strong>Processing Layer</strong><br>ESP8266 / ESP32 processes sensor readings and prepares data for transmission.</p>
+          </li>
+          <li><p><strong>Network Layer</strong><br>Wi-Fi network provides internet connectivity for data transmission.</p>
+          </li>
+          <li><p><strong>Application Layer</strong><br>IoT cloud platform stores, visualizes, and analyzes the received data.</p>
+          </li>
+          </ul>
+          <div><img src="./images/iot.jpg" width="50%"></div>  
+          *Source: IoT Reference Architecture*
+          
+          <h4 id="sensor-data-acquisition-process">Sensor Data Acquisition Process</h4>
+          <p>Sensor data acquisition is a crucial step in IoT systems. The ESP microcontroller performs the following operations:</p>
+          <ul>
+          <li>Reads <strong>analog sensor values</strong> using ADC pins  </li>
+          <li>Reads <strong>digital sensor states</strong> via GPIO pins  </li>
+          <li>Converts raw ADC values into physical units  </li>
+          <li>Filters or validates data before transmission  </li>
+          </ul>
+          <p>Examples of converted sensor data include:</p>
+          <ul>
+          <li>Temperature in degrees Celsius (°C)  </li>
+          <li>Humidity in percentage (%)  </li>
+          <li>Gas concentration in PPM  </li>
+          <li>Distance in centimeters (cm)  </li>
+          </ul>
+          <p>Accurate data acquisition ensures reliability of cloud-based monitoring systems.</p>
+          <h4 id="http-protocol-fundamentals">HTTP Protocol Fundamentals</h4>
+          <p>HTTP (Hypertext Transfer Protocol) is a <strong>request–response communication protocol</strong> used between a client and a server. It forms the foundation of web communication and REST-based APIs.</p>
+          <h5 id="clientserver-model">Client–Server Model</h5>
+          <ul>
+          <li><strong>ESP8266 / ESP32</strong> acts as an <strong>HTTP client</strong>  </li>
+          <li><strong>IoT Cloud Platform</strong> acts as an <strong>HTTP server</strong></li>
+          </ul>
+          <h5 id="common-http-methods">Common HTTP Methods</h5>
+          <ul>
+          <li><strong>GET</strong> – Sends data as URL parameters  </li>
+          <li><strong>POST</strong> – Sends data securely in the request body  </li>
+          </ul>
+          <p>HTTP is widely used in IoT applications because:</p>
+          <ul>
+          <li>It is simple and easy to implement  </li>
+          <li>It is compatible with web technologies  </li>
+          <li>It works with RESTful APIs  </li>
+          </ul>
+          <h4 id="http-data-transmission-mechanism">HTTP Data Transmission Mechanism</h4>
+          <p>The steps involved in HTTP-based IoT data transmission are:</p>
+          <ol>
+          <li>ESP connects to a Wi-Fi network  </li>
+          <li>Sensor values are read and processed  </li>
+          <li>HTTP request URL or request body is formed  </li>
+          <li>HTTP request is sent to the server  </li>
+          <li>Server processes the request and stores data  </li>
+          <li>Server sends a response to ESP  </li>
+          </ol>
+          <p>A successful HTTP request returns a response such as:</p>
+          <ul>
+          <li><strong>200 OK</strong> – Data received successfully  </li>
+          </ul>
+          <p>This confirms successful data transmission.</p>
+          <h4 id="iot-cloud-platform">IoT Cloud Platform</h4>
+          <p>An IoT cloud platform provides services for:</p>
+          <ul>
+          <li>Data storage  </li>
+          <li>Data visualization  </li>
+          <li>Analytics and alert generation  </li>
+          </ul>
+          <p>Typical features of IoT cloud platforms include:</p>
+          <ul>
+          <li>Real-time data graphs  </li>
+          <li>Historical data logs  </li>
+          <li>API keys for authentication  </li>
+          <li>Remote data access  </li>
+          </ul>
+          <p>Commonly used IoT platforms include:</p>
+          <ul>
+          <li>ThingSpeak  </li>
+          <li>Firebase  </li>
+          <li>Blynk  </li>
+          <li>Custom REST-based servers  </li>
+          </ul>
+          <div><img src="./images/dashboard.png" width="45%"></div>  
+          *Source: IoT Platform Documentation*
+          
+          <h4 id="data-visualization-and-remote-monitoring">Data Visualization and Remote Monitoring</h4>
+          <p>Once sensor data reaches the cloud platform:</p>
+          <ul>
+          <li>Data is stored in cloud databases  </li>
+          <li>Values are visualized using graphs and charts  </li>
+          <li>Users can monitor data remotely via web or mobile applications  </li>
+          </ul>
+          <p>This enables <strong>real-time monitoring</strong>, <strong>trend analysis</strong>, and <strong>decision making</strong> without physical presence near the sensors.</p>
+          <h4 id="security-considerations-in-http-based-iot-communication">Security Considerations in HTTP-Based IoT Communication</h4>
+          <p>Although HTTP is simple and widely used, it has certain security limitations:</p>
+          <ul>
+          <li>Data may be transmitted in plain text  </li>
+          <li>Vulnerable to data interception  </li>
+          </ul>
+          <p>To enhance security, advanced IoT systems use:</p>
+          <ul>
+          <li><strong>HTTPS</strong> for encrypted communication  </li>
+          <li><strong>API keys</strong> for authentication  </li>
+          <li><strong>Authorization tokens</strong>  </li>
+          </ul>
+          <p>This experiment introduces basic HTTP communication concepts, while advanced security mechanisms are explored in higher-level IoT studies.</p>
+          <h4 id="applications-of-http-based-iot-systems">Applications of HTTP-Based IoT Systems</h4>
+          <p>HTTP-based IoT communication is widely used in:</p>
+          <ul>
+          <li>Smart agriculture monitoring systems  </li>
+          <li>Weather stations  </li>
+          <li>Remote health monitoring  </li>
+          <li>Smart city infrastructure  </li>
+          <li>Industrial automation systems  </li>
+          </ul>
+          <h4 id="conclusion">Conclusion</h4>
+          <p>This experiment provides a comprehensive understanding of real-time sensor data acquisition and HTTP-based data transmission using ESP8266 and ESP32 microcontrollers. It introduces core IoT concepts such as cloud connectivity, client–server communication, and remote monitoring, forming a strong foundation for advanced IoT application development.</p>
+          <h4 id="references">References</h4>
+          <ol>
+          <li>Arduino and ESP Documentation – <a href="https://www.arduino.cc">https://www.arduino.cc</a>  </li>
+          <li>Espressif Systems ESP8266 &amp; ESP32 Technical Reference  </li>
+          <li>HTTP Protocol Specification – RFC 2616  </li>
+          <li>ThingsBoard IoT Platform Documentation  </li>
+          <li>Internet of Things: A Hands-on Approach – Arshdeep Bahga  </li>
+          </ol>
+          
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND
+          ESP8266/ESP32" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;DLBG&quot;,&quot;expname&quot;:&quot;SIMULATION OF SENDING LIVE SENSORS DATA ON IOT PLATFORM USING HTTP PROTOCOLS AND\nESP8266/ESP32&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-http-protocols-dei/plugins/svc-rating/index.js"></script><script type="module" src="/exp-http-protocols-dei/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>

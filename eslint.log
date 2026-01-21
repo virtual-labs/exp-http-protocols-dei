@@ -1,0 +1,31 @@
+
+/home/runner/work/exp-http-protocols-dei/exp-http-protocols-dei/experiment/simulation/main.js
+    5:1   warning  'am5' is not defined                 no-undef
+    8:13  warning  'am5radar' is not defined            no-undef
+   16:28  warning  'am5radar' is not defined            no-undef
+   20:29  warning  'am5' is not defined                 no-undef
+   23:30  warning  'am5' is not defined                 no-undef
+   24:30  warning  'am5' is not defined                 no-undef
+   25:30  warning  'am5' is not defined                 no-undef
+   26:30  warning  'am5' is not defined                 no-undef
+   32:13  warning  'am5xy' is not defined               no-undef
+   44:36  warning  'am5xy' is not defined               no-undef
+   45:21  warning  'am5radar' is not defined            no-undef
+   46:25  warning  'am5' is not defined                 no-undef
+   57:17  warning  'am5' is not defined                 no-undef
+   60:17  warning  'am5' is not defined                 no-undef
+   69:25  warning  'am5' is not defined                 no-undef
+   69:38  warning  'am5' is not defined                 no-undef
+   75:25  warning  'am5' is not defined                 no-undef
+   75:38  warning  'am5' is not defined                 no-undef
+   81:20  warning  'am5' is not defined                 no-undef
+   82:25  warning  'am5themes_Animated' is not defined  no-undef
+   84:50  warning  'am5xy' is not defined               no-undef
+   92:38  warning  'am5xy' is not defined               no-undef
+  101:23  warning  'am5xy' is not defined               no-undef
+  107:38  warning  'am5xy' is not defined               no-undef
+  108:23  warning  'am5xy' is not defined               no-undef
+  111:40  warning  'am5xy' is not defined               no-undef
+
+✖ 26 problems (0 errors, 26 warnings)
+
