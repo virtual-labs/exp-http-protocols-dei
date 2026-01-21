@@ -16,14 +16,24 @@
 </head>
 
 <body>
-    <header>
-        <div class="exp-changer">
-          <div class="exp-changer-heading">
-            <p class="p-head">IOT Virtual Lab</p>
-          </div>
-        </div>
-      </header>      
+          
       
+    <!-- Instruction Box -->
+    <div class="instruction-box">
+        <h2 class="instruction-title">📋 Experiment Instructions</h2>
+        <div class="instruction-content">
+            <p><strong>Objective:</strong> Simulate DHT11 sensor data transmission from ESP32 to IoT Server using HTTP protocol.</p>
+            <ol>
+                <li>Review the ESP32 code in the text area showing WiFi and DHT11 sensor configuration.</li>
+                <li>Click <strong>"Start Simulation"</strong> to begin sending temperature and humidity data.</li>
+                <li>Observe the sensor readings and scroll down to view real-time data on the IoT Server dashboard.</li>
+                <li>Monitor the gauge charts and line graphs updating every second with sensor readings.</li>
+                <li>Click <strong>"Stop Simulation"</strong> to halt data transmission.</li>
+            </ol>
+            <p class="note">💡 <strong>Note:</strong> The DHT11 sensor sends data every 10 seconds via HTTP POST to the IoT server.</p>
+        </div>
+    </div>
+
     <div class="container">
         <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
         <textarea readonly cols="30" rows="10" type="text" id="textBox" placeholder="insert the code"></textarea>

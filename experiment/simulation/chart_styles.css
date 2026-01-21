@@ -63,4 +63,117 @@ body {
     font-weight: bold;
     margin-top: 10px; /* Space above title */
   }
+
+/* ============================================
+   RESPONSIVE DESIGN FOR CHARTS
+   ============================================ */
+
+/* Tablets and smaller (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container2 {
+    width: 98vw;
+    padding: 15px;
+  }
+
+  .gauge-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .gauge-box {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .chart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-box {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 280px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 400px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .container2 {
+    width: 100vw;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .gauge-container {
+    margin-bottom: 20px;
+  }
+
+  .gauge-box {
+    width: 95%;
+  }
+
+  .chart-box {
+    width: 98%;
+    margin-bottom: 25px;
+  }
+
+  .gauge-title, .chart-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 250px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 350px;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container2 {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .gauge-box {
+    width: 100%;
+  }
+
+  .chart-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gauge-title, .chart-title {
+    font-size: 14px;
+  }
+
+  #gaugeDiv1, #gaugeDiv2 {
+    height: 220px;
+  }
+
+  #chartdiv1, #chartdiv2 {
+    height: 300px;
+  }
+}
   
