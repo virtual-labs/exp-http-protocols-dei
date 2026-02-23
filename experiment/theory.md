@@ -144,6 +144,78 @@ A successful HTTP request returns a response such as:
 
 This confirms successful data transmission.
 
+#### OSI (Open Systems Interconnection) Model
+
+The OSI model, developed by the International Organization for Standardization (ISO), is a conceptual framework that divides network communication into seven functional layers. Each layer performs a distinct role, ensuring systematic data transmission from sender to receiver.
+
+<div><img src="https://media.geeksforgeeks.org/wp-content/uploads/20251216190549974449/osi_model.webp" width="50%"></div>  
+
+**Layer-wise Description**
+
+**1. Physical Layer**
+
+The Physical Layer is responsible for the transmission of raw binary data over a communication medium. In IoT systems, this includes radio frequency transmission via Wi-Fi modules embedded in ESP8266 and ESP32 microcontrollers.
+
+**2. Data Link Layer**
+
+This layer manages node-to-node communication and error detection. It ensures that data frames are correctly transmitted between devices connected to the same network. The IEEE 802.11 Wi-Fi protocol operates at this level.
+
+**3. Network Layer**
+
+The Network Layer handles logical addressing and routing of packets across interconnected networks. The Internet Protocol (IP) assigns unique IP addresses to both the ESP device and the cloud server, enabling global communication.
+
+**4. Transport Layer**
+
+The Transport Layer ensures reliable end-to-end communication. In HTTP-based IoT systems, the Transmission Control Protocol (TCP) provides connection-oriented communication, ensuring ordered and error-free data delivery.
+
+**5. Session Layer**
+
+The Session Layer establishes, manages, and terminates communication sessions between client and server. In IoT communication, this corresponds to maintaining active communication between the ESP module and the cloud platform.
+
+**6. Presentation Layer**
+
+This layer handles data formatting, encoding, and encryption. JSON data formatting and SSL/TLS encryption (in HTTPS communication) operate at this layer.
+
+**7. Application Layer**
+
+The Application Layer provides direct interface services for user applications. Protocols such as HTTP operate here, enabling data exchange between the ESP device and cloud-based servers.
+
+#### TCP/IP Protocol Stack
+
+While the OSI model is theoretical, practical internet communication follows the TCP/IP model. It simplifies communication into four layers and forms the foundation of modern networking.
+
+<div><img src="https://info-savvy.com/wp-content/uploads/2020/04/tcp_ip-networking-model-infosavvy.jpeg" width="35%"></div>
+
+**1. Application Layer**
+
+This layer includes protocols used for user-level communication. In IoT systems, common protocols include:
+
+- HTTP
+
+- HTTPS
+
+- MQTT
+
+In this experiment, HTTP is used for transmitting sensor data to the cloud server.
+
+**2. Transport Layer**
+
+This layer ensures communication reliability and flow control.
+
+- TCP (reliable, connection-oriented)
+
+- UDP (fast, connectionless)
+
+HTTP operates over TCP, which guarantees ordered data delivery.
+
+**3. Internet Layer**
+
+The Internet Layer handles packet routing using the Internet Protocol (IP). It determines the logical path for data transmission between the ESP device and the cloud server.
+
+**4. Network Access Layer**
+
+This layer combines the functions of the OSI Physical and Data Link layers. It manages hardware addressing, Wi-Fi communication, and frame transmission.
+
 #### IoT Cloud Platform
 
 An IoT cloud platform provides services for:
