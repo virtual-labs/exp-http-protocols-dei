@@ -1,89 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Virtual IoT Lab DEI</title>
-    <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="chart_styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- amCharts Resources -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virtual IoT Lab DEI</title>
+  <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="chart_styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- amCharts Resources -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 
 <body>
-          
-      
-    <!-- Instruction Box -->
-    <div class="instruction-box">
-        <h2 class="instruction-title">📋 Experiment Instructions</h2>
-        <div class="instruction-content">
-            <p><strong>Objective:</strong> Simulate DHT11 sensor data transmission from ESP32 to IoT Server using HTTP protocol.</p>
-            <ol>
-                <li>Review the ESP32 code in the text area showing WiFi and DHT11 sensor configuration.</li>
-                <li>Click <strong>"Start Simulation"</strong> to begin sending temperature and humidity data.</li>
-                <li>Observe the sensor readings and scroll down to view real-time data on the IoT Server dashboard.</li>
-                <li>Monitor the gauge charts and line graphs updating every second with sensor readings.</li>
-                <li>Click <strong>"Stop Simulation"</strong> to halt data transmission.</li>
-            </ol>
-            <p class="note">💡 <strong>Note:</strong> The DHT11 sensor sends data every 10 seconds via HTTP POST to the IoT server.</p>
-        </div>
+
+
+  <!-- Instruction Box -->
+  <div class="instruction-box">
+    <h2 class="instruction-title">📋 Experiment Instructions</h2>
+    <div class="instruction-content">
+      <p><strong>Objective:</strong> Simulate DHT11 sensor data transmission from ESP32 to IoT Server using HTTP
+        protocol.</p>
+      <ol>
+        <li>Review the ESP32 code in the text area showing WiFi and DHT11 sensor configuration.</li>
+        <li>Click <strong>"Start Simulation"</strong> to begin sending temperature and humidity data.</li>
+        <li>Observe the sensor readings and scroll down to view real-time data on the IoT Server dashboard.</li>
+        <li>Monitor the gauge charts and line graphs updating every second with sensor readings.</li>
+        <li>Click <strong>"Stop Simulation"</strong> to halt data transmission.</li>
+      </ol>
+      <p class="note">💡 <strong>Note:</strong> The DHT11 sensor sends data every 10 seconds via HTTP POST to the IoT
+        server.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
+    <textarea readonly cols="30" rows="10" type="text" id="textBox" placeholder="insert the code"></textarea>
+    <h2 id="pushbuttonPower" onclick="changePower();">Start Simulation</h2>
+    <!-- <a href="#scroll">Check IoT Server</a> -->
+  </div>
+
+  <a>
+    <p class="p-head2">After start the simulation, the data will be send to IoT server using HTTP protocol.</p>
+  </a>
+
+  <!-- Main container -->
+  <div class="container2" id="scroll">
+
+    <!-- Header -->
+    <h1>IoT Server</h1>
+
+    <!-- Gauge Charts -->
+    <div class="gauge-container">
+      <div class="gauge-box">
+        <div class="gauge-title">Temperature</div>
+        <div id="gaugeDiv1"></div>
+      </div>
+      <div class="gauge-box">
+        <div class="gauge-title">Humidity</div>
+        <div id="gaugeDiv2"></div>
+      </div>
     </div>
 
-    <div class="container">
-        <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
-        <textarea readonly cols="30" rows="10" type="text" id="textBox" placeholder="insert the code"></textarea>
-        <h2 id="pushbuttonPower" onclick="changePower();">Start Simulation</h2>
-        <a href="#scroll">Check IoT Server</a>
+    <!-- Chart Containers -->
+    <div class="chart-container">
+      <div class="chart-box">
+        <div id="chartdiv1"></div>
+        <div class="chart-title">Temperature</div> <!-- Title below the chart -->
+      </div>
+      <div class="chart-box">
+        <div id="chartdiv2"></div>
+        <div class="chart-title">Humidity</div> <!-- Title below the chart -->
+      </div>
     </div>
 
-    <a>
-        <p class="p-head2">After start the simulation, the data will be send to IoT server using HTTP protocol.</p>
-    </a>
+  </div> <!-- End of container2 -->
 
-    <!-- Main container -->
-    <div class="container2" id="scroll">
-
-        <!-- Header -->
-        <h1>IoT Server</h1>
-
-        <!-- Gauge Charts -->
-        <div class="gauge-container">
-            <div class="gauge-box">
-                <div class="gauge-title">Temperature</div>
-                <div id="gaugeDiv1"></div>
-            </div>
-            <div class="gauge-box">
-                <div class="gauge-title">Humidity</div>
-                <div id="gaugeDiv2"></div>
-            </div>
-        </div>
-
-        <!-- Chart Containers -->
-        <div class="chart-container">
-            <div class="chart-box">
-                <div id="chartdiv1"></div>
-                <div class="chart-title">Temperature</div> <!-- Title below the chart -->
-            </div>
-            <div class="chart-box">
-                <div id="chartdiv2"></div>
-                <div class="chart-title">Humidity</div> <!-- Title below the chart -->
-            </div>
-        </div>
-
-    </div> <!-- End of container2 -->
-
-    <!-- External JavaScript file -->
-    <script>
-        // for insert code
-        function insertled() {
-          var serv = (document.getElementById(
-            "textBox"
-          ).value = `#include <WiFi.h>
+  <!-- External JavaScript file -->
+  <script>
+    // for insert code
+    function insertled() {
+      var serv = (document.getElementById(
+        "textBox"
+      ).value = `#include <WiFi.h>
 #include <HTTPClient.h>
 #include <DHT.h>
 
@@ -160,9 +163,10 @@ void loop() {
   delay(10000);
 }
   `);
-        }
-        insertled();
-      </script>
-    <script type="text/javascript" src="main.js"></script>
+    }
+    insertled();
+  </script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
